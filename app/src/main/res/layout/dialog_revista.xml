@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Codigo de la revista"
+        />
+    <EditText
+        android:id="@+id/etCodigoRevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titulo de la revista"
+        />
+    <EditText
+        android:id="@+id/etTituloRevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción de la revista"
+        />
+    <EditText
+        android:id="@+id/etDescripcionRevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipo de la revista"
+    />
+
+    <RadioGroup
+        android:id="@+id/rgTipoRevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbAnuncios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Anuncios"
+            android:checked="true"
+            android:buttonTint="@color/primary"
+        />
+
+        <RadioButton
+            android:id="@+id/rbDibulgacionCientifia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dibulgacion cinetifica"
+            android:buttonTint="@color/primary"
+            />
+
+        <RadioButton
+            android:id="@+id/rbOcio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ocio"
+            android:buttonTint="@color/primary"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAddRevista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        />
+</LinearLayout>

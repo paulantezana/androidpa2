@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Codigo del libro"
+    />
+    <EditText
+        android:id="@+id/etCodigoLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titulo del libro"
+    />
+    <EditText
+        android:id="@+id/etTituloLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción del libro"
+    />
+    <EditText
+        android:id="@+id/etDescripcionLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Categoria del libro"
+    />
+    <EditText
+        android:id="@+id/etCategoriaLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+    <Button
+        android:id="@+id/btnAddLibro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+    />
+</LinearLayout>
