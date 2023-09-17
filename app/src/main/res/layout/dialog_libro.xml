@@ -42,11 +42,12 @@
         android:layout_height="wrap_content"
         android:text="Categoria del libro"
     />
-    <EditText
-        android:id="@+id/etCategoriaLibro"
+    <Spinner
+        android:id="@+id/spCategoriaLibro"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    />
+        android:layout_height="wrap_content">
+    </Spinner>
+
     <Button
         android:id="@+id/btnAddLibro"
         android:layout_width="match_parent"

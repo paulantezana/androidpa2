@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -87,13 +89,17 @@ class LibroFragment : Fragment() {
         val etCodigoLibro: EditText = dialog.findViewById(R.id.etCodigoLibro)
         val etTituloLibro: EditText = dialog.findViewById(R.id.etTituloLibro)
         val etDescripcionLibro: EditText = dialog.findViewById(R.id.etDescripcionLibro)
-        val etCategoriaLibro: EditText = dialog.findViewById(R.id.etCategoriaLibro)
+        val soCategoriaLibro: Spinner = dialog.findViewById(R.id.spCategoriaLibro)
+
+        var categorias = arrayOf("terror","novela","terror")
+
+        soCategoriaLibro.adapter = ArrayAdapter<String>(dialog.context, android.R.layout.simple_list_item_1, categorias )
 
         button.setOnClickListener{
             val libroCodigo =    etCodigoLibro.text
             val libroTitulo =    etTituloLibro.text
             val libroDescripcion =    etDescripcionLibro.text
-            val libroCategoria =    etCategoriaLibro.text
+            val libroCategoria = soCategoriaLibro.selectedItem.toString()
 
             if (
                 libroCodigo.isNullOrEmpty() && libroTitulo.isNullOrEmpty() && libroDescripcion.isNullOrEmpty()
@@ -107,7 +113,7 @@ class LibroFragment : Fragment() {
                 libroCodigo.toString(),
                 libroTitulo.toString(),
                 libroDescripcion.toString(),
-                libroCategoria.toString()
+                libroCategoria
             )
 
             this.guardarLibro(nuevoLibro)
