@@ -72,6 +72,8 @@ class LibroFragment : Fragment() {
     }
 
     private fun initData(){
+        Toast.makeText(this.rootView.context, "NANI!!!!!!!!!!! DATA", Toast.LENGTH_LONG).show()
+
         val listaLibros: List<Libro> = this.recuperarLibros()
         for (lib in listaLibros) {
             this.libros.add(lib)
@@ -159,6 +161,8 @@ class LibroFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         this.rootView = inflater.inflate(R.layout.fragment_libro, container, false)
+
+        Toast.makeText(this.rootView.context, "NANI!!!!!!!!!!!", Toast.LENGTH_LONG).show()
 
         initComponent()
         initUI()

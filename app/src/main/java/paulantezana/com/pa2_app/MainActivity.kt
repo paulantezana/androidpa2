@@ -1,11 +1,13 @@
 package paulantezana.com.pa2_app
 
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
@@ -37,6 +39,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    private fun checkPermition(){
+//        ContextCompat.checkSelfPermission(
+//            this,
+//            Manifest.permission.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+//        ) == PackageManager.PERMISSION_GRANTED -> {
+//            layout.showSnackbar(
+//                view,
+//                getString(R.string.permission_granted),
+//                Snackbar.LENGTH_INDEFINITE,
+//                null
+//            ) {}
+//        }
+    }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> supportFragmentManager.beginTransaction()
@@ -45,6 +61,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 .replace(R.id.fragment_container, ArchivoFragment()).commit()
             R.id.nav_memory -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, LibroFragment()).commit()
+            R.id.nav_customer -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, CustomerFragment()).commit()
+            R.id.nav_product -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ProductFragment()).commit()
+            R.id.nav_sqlite -> supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, SqLiteFragment()).commit()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
 

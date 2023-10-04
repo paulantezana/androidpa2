@@ -18,5 +18,17 @@
             android:id="@+id/nav_file"
             android:icon="@drawable/baseline_file_present_24"
             android:title="Revistas"/>
+        <item
+            android:id="@+id/nav_customer"
+            android:icon="@drawable/baseline_supervised_user_circle_24"
+            android:title="Crud Cliente"/>
+        <item
+            android:id="@+id/nav_product"
+            android:icon="@drawable/baseline_all_inbox_24"
+            android:title="Crud Producto"/>
+        <item
+            android:id="@+id/nav_sqlite"
+            android:icon="@drawable/baseline_browser_updated_24"
+            android:title="Almacena SQLITE"/>
     </group>
 </menu>
